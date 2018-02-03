@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{%block head%}
+
+	<title>Profile</title>
+
+{%endblock%}
+
+
+{% block body %}
+<div class="container">
+
+
+    <h1 class="text-center">Welcome {{ user.first_name }} {{ user.last_name }} </h1>
+    <h1 class="text-center"> We hope you are doing nicely.</h1>
+
+    {% for fields in user.category %}
+ <h1> {{fields.category_name}} </h1>
+
+    {% endfor %}
+<br>
+
+
+
+</div>
+
+
+{% endblock %}
